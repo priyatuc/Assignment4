@@ -82,16 +82,6 @@ def increase_key(heap, task_index, new_priority):
         else:
             break
 
-# Decrease Key Function
-def decrease_key(heap, task_index, new_priority):
-    # Decrease the priority of a task and bubble it down if necessary.
-    if new_priority > heap[task_index].priority:
-        print("New priority is higher than current — use increase_key instead.")
-        return
-
-    heap[task_index].priority = new_priority
-    heapify(heap, len(heap), task_index)
-
 # Is Empty Function
 def is_empty(heap):
     # Check if the heap is empty.
