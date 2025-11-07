@@ -39,10 +39,7 @@ for i in range(n // 2 - 1, -1, -1):
 
 # Insert Function
 def insert(heap, task):
-    """
-    Insert a new task into the heap and maintain the heap property.
-    Time complexity: O(log n)
-    """
+    # Insert a new task into the heap and maintain the heap property.
     heap.append(task)
     i = len(heap) - 1
 
@@ -113,4 +110,4 @@ if __name__ == "__main__":
     print("Extracting tasks in order of priority:")
     while not is_empty(list_of_tasks):
         t = extract_max(list_of_tasks)
-        print(f"Task ID: {t.task_id}, Priority: {t.priority}")
+        print(f"Task ID: {t.task_id}, Priority: {t.priority}, Deadline: {t.deadline}, Arrival Time: {t.arrival_time}")
